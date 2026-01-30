@@ -6,7 +6,7 @@
 >
 	<modelVersion>4.0.0</modelVersion>
 	
-	<!-- Spring Boot -->
+	<!-- Spring Boot parent repository -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -14,7 +14,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	
-	<!-- Project Metadata -->
+	<!-- Project metadata -->
 	<groupId>br.net.community</groupId>
 	<artifactId>jsba</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -40,7 +40,7 @@
 			<optional>true</optional>
 		</dependency>
         
-		<!-- Configuration Processor (IDE feliz, autocomplete mais eficiente e warnings a menos) -->
+		<!-- Configuration Processor (Autocomplete mais eficiente e warnings a menos) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -54,7 +54,7 @@
 		    <artifactId>lombok</artifactId>
 		</dependency>
 		
-		<!-- MapStruct (biblioteca implementar o padrão Mapper) -->
+		<!-- MapStruct (biblioteca para implementar o padrão Mapper) -->
 		<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
 		<dependency>
 		    <groupId>org.mapstruct</groupId>
@@ -172,14 +172,6 @@
 		    <scope>runtime</scope>
 		</dependency>
 		
-		<!-- Cliente Open Feign para consumir APIs externas -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-openfeign</artifactId>
-		    <version>5.0.0</version>
-		</dependency>
-
 		<!-- Módulo de serialização/deserialização Jackson para JWT -->
 		<!-- Source: https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson -->
 		<dependency>
@@ -188,6 +180,14 @@
 		    <version>0.13.0</version>
 		    <scope>runtime</scope>
 		</dependency>		
+
+		<!-- Cliente Open Feign para consumir APIs externas -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-openfeign</artifactId>
+		    <version>5.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -224,6 +224,16 @@
 			        </annotationProcessorPaths>
 			    </configuration>
 			</plugin>	
+			
+			<!-- Surefire test -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+			  	<artifactId>maven-surefire-plugin</artifactId>
+			  	<configuration>
+			    	<debugForkedProcess>true</debugForkedProcess>
+			    	<forkCount>1</forkCount>
+			  	</configuration>
+			</plugin>
         </plugins>
         
         <!-- 
