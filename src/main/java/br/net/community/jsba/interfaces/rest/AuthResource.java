@@ -35,7 +35,7 @@ public class AuthResource {
         this.jwtService = jwtService;
     }
 
-    @PostMapping("/login") // POST /api/template/auth/login
+    @PostMapping("/login") // POST /api/jsba/auth/login
     public ResponseEntity<Map<String, String>> login(@RequestBody AuthDTO request) {
         // Realiza a autenticação do usuário
     	Authentication auth = authManager.authenticate(

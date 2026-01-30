@@ -7,6 +7,8 @@ import org.apache.commons.lang3.NotImplementedException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import br.net.community.jsba.util.Consts;
+
 /**
  * Interface: CrudService
  *
@@ -26,16 +28,20 @@ public interface CrudService<T, Id> {
     
     default Page<T> findAllPageable(Pageable pageable) {
     	// Método opcional (as classes não são obrigadas a implementá-lo)
-    	throw new NotImplementedException("Método não implementado.");
+    	throw new NotImplementedException(Consts.METHOD_NOT_IMPLEMENTED);
     }
     
     default List<T> findAllById(List<Id> ids) {
     	// Método opcional (as classes não são obrigadas a implementá-lo)
-    	throw new NotImplementedException("Método não implementado.");
+    	throw new NotImplementedException(Consts.METHOD_NOT_IMPLEMENTED);
+    }
+    
+    default Page<T> findAllByIdPageable(List<Id> ids, Pageable pageable) {
+    	throw new NotImplementedException(Consts.METHOD_NOT_IMPLEMENTED);
     }
     
     default void deleteById(Id id) {
     	// Método opcional (as classes não são obrigadas a implementá-lo)
-		throw new NotImplementedException("Método não implementado.");
+		throw new NotImplementedException(Consts.METHOD_NOT_IMPLEMENTED);
 	}
 }

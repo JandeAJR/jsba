@@ -15,14 +15,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/jsba/application-info",
+              "raw": "{{baseUrl}}/api/jsba/application/info",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "jsba",
-                "application-info"
+                "application",
+                "info"
               ]
             }
           },

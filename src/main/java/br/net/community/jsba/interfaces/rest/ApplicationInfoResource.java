@@ -21,7 +21,7 @@ import br.net.community.jsba.util.Consts;
  */
 
 @RestController
-@RequestMapping("/application-info")
+@RequestMapping("/application")
 public class ApplicationInfoResource {
     private final ProjectInfo projectInfo;
 
@@ -29,7 +29,7 @@ public class ApplicationInfoResource {
         this.projectInfo = projectInfo;
     }
 
-    @GetMapping(produces = "application/json") // GET /api/template/info
+    @GetMapping(value = "/info", produces = "application/json") // GET /api/jsba/application/info
     public ResponseEntity<ApplicationInfoDTO> info() {
     	ApplicationInfoDTO body = ApplicationInfoDTO.builder()
     			.name(Objects.toString(projectInfo.name(), Consts.UNKNOWN))

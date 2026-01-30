@@ -74,7 +74,7 @@ public class SecurityConfig {
                 ).permitAll()
 
                 // Endpoints públicos (liste os endpoints públicos aqui)
-                .requestMatchers(HttpMethod.GET, "/application-info").permitAll()
+                .requestMatchers(HttpMethod.GET, "/application/info").permitAll()
 
                 // 🔐 O resto exige JWT válido
                 .anyRequest().authenticated()

@@ -7,3 +7,11 @@
 [Open API](http://localhost:8080/api/jsba/swagger-ui/index.html#/)
 
 [/v3/api-docs](http://localhost:8080/api/jsba/v3/api-docs)
+
+## Endpoints
+
+[GET] Application Info  
+<http://localhost:8080/api/jsba/application-info>
+
+[POST] Auth Login  
+<http://localhost:8080/api/jsba/auth/login>
