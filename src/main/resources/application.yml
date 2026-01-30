@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: "@project.name@"
+
+  profiles:
+    active: test
+
+  jpa:
+    open-in-view: true
+
+  flyway:
+    enabled: false
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+  web:
+    resources:
+      add-mappings: false
+
+  jackson:
+    property-naming-strategy: LOWER_CAMEL_CASE # SNAKE_CASE, KEBAB_CASE, LOWER_CAMEL_CASE, UPPER_CAMEL_CASE, LOWER_CASE, LOWER_DOT_CASE
+
+project:
+  name: "@project.name@"
+  version: "@project.version@"

@@ -1,0 +1,25 @@
+${AnsiStyle.BOLD}${AnsiColor.BRIGHT_GREEN}
+=======================================================================================                                                                             
+${AnsiColor.BRIGHT_BLUE}
+/**
+ *      888888  .d8888b.  888888b.         d8888 
+ *        "88b d88P  Y88b 888  "88b       d88888 
+ *         888 Y88b.      888  .88P      d88P888 
+ *         888  "Y888b.   8888888K.     d88P 888 
+ *         888     "Y88b. 888  "Y88b   d88P  888 
+ *         888       "888 888    888  d88P   888 
+ *         88P Y88b  d88P 888   d88P d8888888888 
+ *         888  "Y8888P"  8888888P" d88P     888 
+ *       .d88P                                   
+ *     .d88P"                                    
+ *    888P"                                      
+ */                                                                                                           
+${AnsiColor.BRIGHT_GREEN}
+=======================================================================================   
+                Bem-vindo à aplicação ${spring.application.name}
+                Versão: ${project.version}
+                Profile: ${spring.profiles.active}
+                Spring Boot: ${spring-boot.version}
+                Java: ${java.version}                
+=======================================================================================
+${AnsiStyle.NORMAL}${AnsiColor.DEFAULT}
