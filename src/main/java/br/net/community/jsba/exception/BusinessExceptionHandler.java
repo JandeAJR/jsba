@@ -17,15 +17,15 @@ import lombok.extern.slf4j.Slf4j;
  * Classe: BusinessExceptionHandler
  *
  * <p>Classe para tratar exceções de regras de negócio na aplicação.<br>
- * Utiliza @ControllerAdvice para interceptar exceções lançadas pelos controllers (resources).<br>
- * Implemente o tratamento para as classes de business exceptions da aplicação aqui</p>
+ * É anotada com @RestControllerAdvice para interceptar exceções lançadas pelos controllers (resources).<br>
+ * Os tratamentos para as classes de business exceptions da aplicação devem ser implementados aqui</p>
  *
  * Responsável: Alexandre José da Rocha<br>
  * Desde: 2026-01-28
  */
 
 @Slf4j
-@RestControllerAdvice(basePackages = "com.javacode.template") // escopo do ControllerAdvice
+@RestControllerAdvice
 public class BusinessExceptionHandler {
 	@ExceptionHandler(ResourceNotFoundException.class)  // essa anotação trata o erro da exception ResourceNotFoundException
     public ResponseEntity<ResourceErrorResponse> resourceNotFoundException(
@@ -43,7 +43,7 @@ public class BusinessExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.info(ex.getMessage()); // Log de info no servidor (Lombok)  
+        log.error(ex.getMessage()); // Log no servidor (Lombok)  
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
 }

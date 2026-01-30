@@ -25,14 +25,15 @@ import lombok.extern.slf4j.Slf4j;
  * Classe: GlobalExceptionHandler
  *
  * <p>Classe responsável por tratar exceções de forma global na aplicação.<br>
- * Utiliza @ControllerAdvice para interceptar exceções lançadas pelos controllers (resources).</p>
+ * É anotada com @RestControllerAdvice para interceptar exceções lançadas pelos controllers (resources).<br>
+ * Os tratamentos para as classes globais de exception da aplicação devem ser implementados aqui</p>
  *
  * Responsável: Alexandre José da Rocha<br>
  * Desde: 2026-01-28
  */
 
 @Slf4j
-@RestControllerAdvice(basePackages = "com.javacode.template") // escopo do ControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler(DatabaseException.class)  // essa anotação trata erros de banco de dados
     public ResponseEntity<ResourceErrorResponse> dataBaseException(
@@ -50,7 +51,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -70,7 +71,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -90,7 +91,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -110,7 +111,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -130,7 +131,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -150,7 +151,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
         
@@ -174,7 +175,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -194,7 +195,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -214,7 +215,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
         
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
     
@@ -234,7 +235,7 @@ public class GlobalExceptionHandler {
         		httpServletRequest.getRequestURI(),
         		Instant.now());
                 
-        log.error(ex.getMessage()); // Log de erro no servidor (Lombok) 
+        log.error(ex.getMessage()); // Log no servidor (Lombok) 
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
 }

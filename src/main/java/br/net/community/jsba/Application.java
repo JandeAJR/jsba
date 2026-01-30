@@ -8,7 +8,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * Classe: Application
  *
- * <p>Starter da aplicação Java Spring Boot - JSBA.</p>
+ * <p>Starter da aplicação Java Spring Boot.<br>
+ * JSBA - Java Spring Boot Application Project<p>
  *
  * Responsável: Alexandre José da Rocha<br>
  * Desde: 2026-01-28
