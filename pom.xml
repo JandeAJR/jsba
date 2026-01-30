@@ -198,7 +198,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             
-            <!-- Annotation Processor para Lombok e MapStruct -->
+            <!-- Plugin Annotation Processor para Lombok e MapStruct -->
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-compiler-plugin</artifactId>
@@ -223,17 +223,7 @@
 			            </path>
 			        </annotationProcessorPaths>
 			    </configuration>
-			</plugin>	
-			
-			<!-- Surefire test -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-			  	<artifactId>maven-surefire-plugin</artifactId>
-			  	<configuration>
-			    	<debugForkedProcess>true</debugForkedProcess>
-			    	<forkCount>1</forkCount>
-			  	</configuration>
-			</plugin>
+			</plugin>				
         </plugins>
         
         <!-- 
