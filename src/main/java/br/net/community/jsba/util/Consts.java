@@ -18,4 +18,5 @@ public class Consts {
 	public static final String NOT_CONFIGURED = "not-configured";
 	public static final String RESOURCE_NOT_FOUND = "Recurso não encontrado";
 	public static final String METHOD_NOT_IMPLEMENTED = "Método não implementado";
+	public static final String APPLICATION_INFO = "Informações acerca da aplicação";
 }
